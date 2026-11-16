@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>Redirecting… – Acqube Accounting</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<script>
+  // Old links from the previous website → matching page on the new site
+  var p = location.pathname.toLowerCase().replace(/\/+$/, '');
+  var map = {
+    '/login': '#admin', '/admin': '#admin', '/partner-login': '#admin',
+    '/services': '#services', '/pricing': '#pricing', '/about': '#about', '/about-us': '#about',
+    '/contact': '#contact', '/contact-us': '#contact', '/blog': '#blog', '/testimonials': '#testimonials',
+    '/privacy': '#privacy-policy', '/privacy-policy': '#privacy-policy', '/terms': '#terms', '/disclaimer': '#disclaimer'
+  };
+  var target = map[p] !== undefined ? map[p] : (p.indexOf('/blog') === 0 ? '#blog' : '');
+  location.replace('/' + target);
+</script>
+</head>
+<body style="font-family:sans-serif;text-align:center;padding:60px">
+  <p>Taking you to <a href="/">acqube.com</a>…</p>
+</body>
+</html>

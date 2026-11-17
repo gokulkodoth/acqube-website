@@ -66,6 +66,7 @@ def set_head(html, info):
     sub(r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{esc(info["canonical"])}">')
     sub(r'<meta property="og:type" content="[^"]*">', f'<meta property="og:type" content="{esc(info["ogtype"])}">')
     sub(r'<meta name="robots" content="[^"]*">', f'<meta name="robots" content="{esc(info["robots"])}">')
+    html = html.replace('</head>', '<meta name="acqube-prerendered" content="1">\n</head>', 1)
     if info.get('ld'):
         ld = info['ld'].replace('</', '<\\/')
         html = html.replace('</head>', f'<script type="application/ld+json" id="page-ld">{ld}</script>\n</head>', 1)

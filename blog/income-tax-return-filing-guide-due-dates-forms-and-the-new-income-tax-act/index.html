@@ -698,7 +698,7 @@ const slugify = t => String(t||'').toLowerCase().replace(/&/g,' and ').replace(/
 const plain = t => String(t||'').replace(/[#*>\-]/g,' ').replace(/\s+/g,' ').trim();
 
 /* ---------- GOOGLE ANALYTICS 4 ---------- */
-const GA_ID = ''; // paste the Measurement ID here, e.g. 'G-ABC123XYZ'
+const GA_ID = 'G-8MZVFK2WZ2'; // paste the Measurement ID here, e.g. 'G-ABC123XYZ'
 (function(){
   if(!GA_ID || navigator.webdriver || location.pathname.startsWith('/admin')) return;   // no tracking for the page generator or the admin console
   const s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID; document.head.appendChild(s);

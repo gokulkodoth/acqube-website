@@ -118,3 +118,27 @@ create policy "admins manage testimonials" on public.testimonials
 grant select, insert, update, delete on public.leads, public.posts, public.testimonials to authenticated;
 grant insert on public.leads to anon;
 grant select on public.posts, public.testimonials to anon;
+
+-- ---------- Site settings (Google rating shown on the website) ----------
+create table if not exists public.site_settings (
+  key        text primary key,
+  value      jsonb not null,
+  updated_at timestamptz not null default now()
+);
+alter table public.site_settings enable row level security;
+
+drop policy if exists "public reads site settings" on public.site_settings;
+create policy "public reads site settings" on public.site_settings
+  for select to anon, authenticated using (true);
+
+drop policy if exists "admins manage site settings" on public.site_settings;
+create policy "admins manage site settings" on public.site_settings
+  for all to authenticated
+  using (public.is_admin()) with check (public.is_admin());
+
+grant select on public.site_settings to anon;
+grant select, insert, update, delete on public.site_settings to authenticated;
+
+insert into public.site_settings (key, value)
+values ('google_rating', '{"rating": 4.7, "count": 13}')
+on conflict (key) do nothing;

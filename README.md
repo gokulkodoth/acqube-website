@@ -33,3 +33,11 @@ Go to `https://your-site/#admin` (also linked as "Admin" in the footer) and sign
 ## Optional next steps
 - Email alert for each new lead: Supabase → Database → Webhooks (on insert into `leads`) → send to an email or automation service such as Zapier, Make or Pabbly.
 - Google Analytics / Search Console: add the tracking snippet into `<head>` of `index.html`.
+
+## How the site is built (since Nov 2026)
+- `src/index.html` is the website source. **Edit this file**, not the generated ones.
+- `tools/build.py` turns it into one real page per URL (`/services/gst/`, `/blog/<article>/`, …) with its own title,
+  description and content, plus `sitemap.xml` and `robots.txt`. The generated files live in the repository root.
+- `.github/workflows/build-site.yml` runs the build automatically every morning and whenever `src/` changes, so new
+  blog posts published from Admin get their own page and sitemap entry by the next morning.
+- Google Analytics: set `GA_ID` near the top of the script in `src/index.html`.

@@ -1,0 +1,42 @@
+# Rebuilds the pre-rendered pages (one per service, article and page) and the sitemap.
+# Runs every morning (after the 6 AM Google-rating update), when the site source changes,
+# and on demand (Actions tab -> "Build website pages" -> Run workflow).
+name: Build website pages
+on:
+  schedule:
+    - cron: '30 1 * * *'        # 07:00 India time
+  push:
+    branches: [main]
+    paths: ['src/**', 'tools/**', '.github/workflows/build-site.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: build-site
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install page generator
+        run: |
+          pip install playwright==1.48.0
+          python -m playwright install --with-deps chromium
+      - name: Generate pages from live data
+        run: python tools/build.py --out .
+      - name: Publish if anything changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "acqube-site-bot"
+          git config user.email "acqube-site-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Rebuild website pages ($(date -u +%F))"
+          git push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true

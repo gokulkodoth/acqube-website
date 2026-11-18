@@ -109,7 +109,10 @@ def build(out, mock=None, supabase_js=None):
             page.goto(base + r); page.wait_for_function(ready, timeout=30000); page.wait_for_timeout(600)
             info = page.evaluate("""() => {
               document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in'));
-              const active=document.querySelector('.page.on');
+              const active=document.querySelector('.page.on').cloneNode(true);
+              // a single service page carries only its own service (no hidden copies of the others)
+              const det=active.querySelector('#svc-detail'); const blocks=active.querySelector('#svc-blocks');
+              if(det && det.innerHTML.trim() && blocks) blocks.innerHTML='';
               const g=(sel,attr)=>{const e=document.head.querySelector(sel);return e?e.getAttribute(attr):''};
               const ld=document.getElementById('page-ld');
               return {title:document.title, desc:g('meta[name="description"]','content'), canonical:g('link[rel="canonical"]','href'),

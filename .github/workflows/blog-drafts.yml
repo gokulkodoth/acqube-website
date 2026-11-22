@@ -1,0 +1,47 @@
+# Uploads new article files from _blog-drafts/ to the website's Admin -> Blog as DRAFTS.
+# Nothing goes live until you click Publish in the admin.
+name: Upload blog drafts
+on:
+  push:
+    branches: [main]
+    paths: ['_blog-drafts/*.json']
+  workflow_dispatch:
+    inputs:
+      file:
+        description: 'Draft file to (re)upload, e.g. _blog-drafts/2026-11-23-example.json'
+        required: true
+permissions:
+  contents: read
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    env:
+      SB_URL: https://hegvbqpwzwmazwwkhspx.supabase.co
+      SB_KEY: sb_publishable_fTjqWmMfpBHpw1ze5N0Jbw_9QquQplB
+      SECRET: ${{ secrets.BLOG_DRAFT_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Send new drafts to the website admin
+        env:
+          BEFORE: ${{ github.event.before }}
+          INPUT_FILE: ${{ github.event.inputs.file }}
+        run: |
+          set -euo pipefail
+          if [ -z "$SECRET" ]; then echo "::error::Add the BLOG_DRAFT_SECRET repository secret first"; exit 1; fi
+          if [ -n "${INPUT_FILE:-}" ]; then files="$INPUT_FILE"
+          elif [ -z "${BEFORE:-}" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then files=$(git show --pretty= --name-only --diff-filter=A HEAD -- '_blog-drafts/*.json')
+          else files=$(git diff --name-only --diff-filter=A "$BEFORE" "$GITHUB_SHA" -- '_blog-drafts/*.json'); fi
+          [ -z "$files" ] && { echo "No new drafts"; exit 0; }
+          for f in $files; do
+            echo "Uploading $f"
+            jq -e '(.title|type=="string" and length>5 and length<=200) and (.body|type=="string" and length>500) and ((.excerpt//"")|length<=300)' "$f" >/dev/null \
+              || { echo "::error file=$f::title/body/excerpt missing or too long"; exit 1; }
+            payload=$(jq --arg s "$SECRET" '{p_secret:$s,p_title:.title,p_category:(.category//"General"),p_excerpt:(.excerpt//""),p_body:.body}' "$f")
+            code=$(curl -sS -o /tmp/resp -w '%{http_code}' "$SB_URL/rest/v1/rpc/submit_blog_draft" \
+              -H "apikey: $SB_KEY" -H 'Content-Type: application/json' -d "$payload")
+            cat /tmp/resp; echo
+            [ "$code" = "200" ] || { echo "::error file=$f::Supabase returned HTTP $code"; exit 1; }
+            echo "::notice::Saved as draft: $(jq -r .title "$f")"
+          done

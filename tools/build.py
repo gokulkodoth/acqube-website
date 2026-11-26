@@ -105,7 +105,7 @@ def build(out, mock=None, supabase_js=None):
         routes = page.evaluate('window.__routes()')
         print(f'{len(routes)} public pages')
 
-        for r in routes + ['/admin/']:
+        for r in routes + ['/admin/', '/view/']:
             page.goto(base + r); page.wait_for_function(ready, timeout=30000); page.wait_for_timeout(600)
             info = page.evaluate("""() => {
               document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in'));
@@ -131,8 +131,8 @@ def build(out, mock=None, supabase_js=None):
     # ---- write pages ----
     os.makedirs(out, exist_ok=True)
     for r, info in results.items():
-        if r == '/admin/':
-            # the admin console is rendered live in the browser only
+        if r in ('/admin/', '/view/'):
+            # the admin console and shared quotes/invoices are rendered live in the browser only
             info['html'] = None
         html = set_head(template, info)
         if info['html']:
@@ -149,13 +149,13 @@ def build(out, mock=None, supabase_js=None):
     # sitemap + robots
     today = datetime.date.today().isoformat()
     def prio(r): return '1.0' if r == '/' else '0.9' if r.startswith('/services/') else '0.7' if r.startswith('/blog/') else '0.6'
-    urls = [r for r in results if r != '/admin/']
+    urls = [r for r in results if r not in ('/admin/', '/view/')]
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for r in urls:
         xml.append(f'  <url><loc>{SITE}{r}</loc><lastmod>{today}</lastmod><priority>{prio(r)}</priority></url>')
     xml.append('</urlset>')
     open(os.path.join(out, 'sitemap.xml'), 'w').write('\n'.join(xml) + '\n')
-    open(os.path.join(out, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nDisallow: /admin/\nSitemap: {SITE}/sitemap.xml\n')
+    open(os.path.join(out, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /view/\nSitemap: {SITE}/sitemap.xml\n')
     for f in STATIC:
         s = os.path.join(SRC, f)
         if os.path.exists(s) and os.path.abspath(out) != SRC:

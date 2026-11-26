@@ -342,6 +342,50 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--blue);box-s
 .tabs button{font:600 14.5px Inter;color:#C9C6F0;background:none;border:0;padding:12px 18px;border-radius:12px 12px 0 0;cursor:pointer;white-space:nowrap}
 .tabs button.on{background:var(--bg-2);color:var(--navy)}
 #p-admin section{background:var(--bg-2);min-height:70vh;padding-top:30px}
+/* quotes & invoices (admin) */
+.n{text-align:right;white-space:nowrap}
+.editor h4{font:700 15px Outfit,sans-serif;color:var(--navy);margin:20px 0 10px}
+.bill-items{min-width:720px}.bill-items td{vertical-align:middle;padding:6px 5px}.bill-items input,.bill-items select{padding:8px 9px;font-size:14px;width:100%}
+.bill-items .w-sac{width:100px}.bill-items .w-q{width:84px}.bill-items .w-r{width:120px}.bill-items .w-g{width:84px}
+.bill-add{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 6px}.bill-add select{max-width:340px}
+.bill-tot{margin:6px 0 18px auto;max-width:360px;font-size:14.5px}.bill-tot>div{display:flex;justify-content:space-between;gap:16px;padding:4px 0}
+.bill-tot .g{font-weight:700;font-size:17px;color:var(--navy);border-top:1px solid var(--line);padding-top:8px;margin-top:4px}.bill-tot .hint{display:block;text-align:right}
+.share{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:6px}.share input{flex:1;min-width:220px;font-size:13px}
+.wa-btn{background:#25D366;color:#fff}.wa-btn:hover{background:#1EB257;color:#fff}
+.st-Sent{background:#EEF0FB;color:var(--blue)}.st-Accepted,.st-Paid{background:#E5F8EE;color:#13804A}
+/* shared quote / invoice page */
+body.docview header,body.docview footer,body.docview .wa-float,body.docview .wa-tip{display:none!important}
+#p-view{background:var(--bg-2);min-height:100vh;padding:28px 14px 60px}
+.doc-actions{max-width:840px;margin:0 auto 14px;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
+.doc-flag{margin-right:auto;font-size:13.5px;color:#9A6200;background:#FFF3DC;border-radius:8px;padding:6px 10px}
+.accept{max-width:840px;margin:0 auto 14px;background:#fff;border:2px solid var(--cyan);border-radius:14px;padding:18px 20px}.accept p{color:var(--muted);font-size:14px;margin:4px 0 12px}
+.accept .row{display:flex;gap:8px;flex-wrap:wrap}.accept input{flex:1;min-width:200px}
+.doc{position:relative;max-width:840px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:40px 44px;font-size:13.5px;line-height:1.5;color:var(--ink);overflow:hidden}
+.doc-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;border-bottom:3px solid var(--navy);padding-bottom:18px;margin-bottom:20px}
+.doc-logo{height:58px;width:auto}
+.doc-ttl{text-align:right}.doc-ttl h1{font:700 25px Outfit,sans-serif;color:var(--navy);margin:0 0 8px;text-transform:uppercase;letter-spacing:.05em}
+.doc-meta{margin-left:auto;border-collapse:collapse}.doc-meta td{padding:1px 0 1px 14px;text-align:right}.doc-meta td:first-child{color:var(--muted)}
+.doc-parties{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:22px}
+.doc small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.doc-parties b{font-size:15px;color:var(--navy);display:block;margin-bottom:2px}.doc-parties p{margin:2px 0}
+.doc-scroll{overflow-x:auto}.doc-items{width:100%;border-collapse:collapse;margin-bottom:16px}
+.doc-items th{background:var(--navy);color:#fff;font-weight:600;font-size:12px;text-align:left;padding:8px 10px;-webkit-print-color-adjust:exact;print-color-adjust:exact}.doc-items th.n{text-align:right}
+.doc-items td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc-sum{display:flex;gap:28px;justify-content:space-between;align-items:flex-start;margin-bottom:16px}.doc-words{flex:1;font-style:italic;padding-top:4px}
+.doc-sum table{min-width:290px;border-collapse:collapse}.doc-sum td{padding:4px 0}.doc-sum td:last-child{text-align:right;padding-left:24px;white-space:nowrap}
+.doc-sum .tot td{font-weight:700;font-size:15px;color:var(--navy);border-top:2px solid var(--navy);padding-top:8px}
+.doc-pay,.doc-note{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}.doc-pay p,.doc-note p{margin:2px 0}
+.doc-sign{display:flex;justify-content:space-between;align-items:flex-end;margin-top:30px;gap:20px}.doc-sign>div:last-child{text-align:right}.doc-sign .sig{height:46px}.doc-sign small{margin-top:2px}
+.doc-sign .acc{color:#13804A;font-size:13px}
+.doc-foot{margin-top:24px;padding-top:10px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:11.5px}
+.stamp{position:absolute;top:118px;right:28px;transform:rotate(-12deg);border:3px solid;border-radius:8px;padding:2px 14px;font:800 22px Outfit,sans-serif;letter-spacing:.12em;opacity:.5;pointer-events:none}
+.s-PAID,.s-ACCEPTED{color:#13804A}.s-CANCELLED{color:#C0392B}
+.doc-msg{max-width:520px;margin:60px auto;background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;text-align:center;color:var(--muted)}.doc-msg p{margin:12px 0 0}
+@media(max-width:640px){.doc{padding:22px 16px;font-size:12.5px}.doc-parties{grid-template-columns:1fr;gap:14px}.doc-top{flex-direction:column}.doc-ttl{text-align:left}
+  .doc-meta{margin-left:0}.doc-meta td{text-align:left;padding:1px 14px 1px 0}.doc-sum{flex-direction:column;gap:10px}.doc-sum table{width:100%;min-width:0}.doc-items th:nth-child(1),.doc-items td:nth-child(1),.doc-items th:nth-child(3),.doc-items td:nth-child(3){display:none}.doc-items th,.doc-items td{padding:7px 5px;font-size:11.5px}.stamp{top:148px;right:14px;font-size:17px}}
+@media print{@page{size:A4;margin:12mm}body{background:#fff}#p-view{padding:0;background:#fff;min-height:0}.doc-actions,#accept-box,.toast,.modal{display:none!important}
+  .doc{border:0;box-shadow:none;border-radius:0;padding:0;max-width:none;font-size:12px}.doc-items tr,.doc-sum,.doc-sign{break-inside:avoid}}
+
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:22px}
 @media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
 .stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px}
@@ -665,6 +709,9 @@ footer .ph{background:rgba(255,255,255,.08);color:#fff;border-color:var(--cyan)}
   <section><div class="wrap" id="admin-root"></div></section>
 </div>
 
+<!-- ================= SHARED QUOTE / INVOICE ================= -->
+<div class="page" id="p-view"><div id="view-root"></div></div>
+
 <!-- ================= LEGAL ================= -->
 <div class="page" id="p-legal">
   <div class="page-hero"><div class="wrap"><div class="crumbs"><a href="/">Home</a> / <span id="legal-crumb"></span></div><h1 id="legal-title"></h1></div></div>
@@ -726,14 +773,14 @@ const plain = t => String(t||'').replace(/[#*>\-]/g,' ').replace(/\s+/g,' ').tri
 /* ---------- GOOGLE ANALYTICS 4 ---------- */
 const GA_ID = 'G-8MZVFK2WZ2'; // paste the Measurement ID here, e.g. 'G-ABC123XYZ'
 (function(){
-  if(!GA_ID || navigator.webdriver || location.pathname.startsWith('/admin')) return;   // no tracking for the page generator or the admin console
+  if(!GA_ID || navigator.webdriver || /^\/(admin|view)/.test(location.pathname)) return;   // no tracking for the page generator or the admin console
   const s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID; document.head.appendChild(s);
   window.dataLayer=window.dataLayer||[]; window.gtag=function(){dataLayer.push(arguments);};
   gtag('js',new Date()); gtag('config',GA_ID,{send_page_view:false});
 })();
-const track=(name,params={})=>{ try{ if(window.gtag && !location.pathname.startsWith('/admin')) gtag('event',name,params); }catch(_){} };
+const track=(name,params={})=>{ try{ if(window.gtag && !/^\/(admin|view)/.test(location.pathname)) gtag('event',name,params); }catch(_){} };
 let LAST_TRACKED=null;
-function trackPage(){ if(!window.gtag||location.pathname===LAST_TRACKED||location.pathname.startsWith('/admin')) return; LAST_TRACKED=location.pathname;
+function trackPage(){ if(!window.gtag||location.pathname===LAST_TRACKED||/^\/(admin|view)/.test(location.pathname)) return; LAST_TRACKED=location.pathname;
   setTimeout(()=>track('page_view',{page_location:location.href,page_path:location.pathname,page_title:document.title}),300); }
 document.addEventListener('click',e=>{
   const a=e.target.closest('a,button'); if(!a) return;
@@ -1040,7 +1087,7 @@ function renderRating(){ reviewLinks();
 async function loadRating(){ if(!SB) return; const {data,error}=await SB.from('site_settings').select('value,updated_at').eq('key','google_rating').maybeSingle(); if(!error&&data&&data.value){ GRATING={...data.value,updated:data.updated_at}; renderRating(); refreshAdmin(); } }
 async function loadTestis(){ if(!SB) return STATE.testis=[]; const {data,error}=await SB.from('testimonials').select('*').order('created_at',{ascending:false}); if(error) STATE.dbDown=true; STATE.testis=error?[]:data.map(mapTesti); renderTestimonials(); refreshAdmin(); }
 async function loadLeads(){ if(!SB||!CAN_ADMIN) return; const {data,error}=await SB.from('leads').select('*').order('created_at',{ascending:false}).limit(2000); STATE.leads=error?[]:data.map(mapLead); refreshAdmin(); }
-const reloadAll = () => Promise.all([loadPosts(),loadTestis(),loadLeads(),loadRating()]);
+const reloadAll = () => Promise.all([loadPosts(),loadTestis(),loadLeads(),loadRating(),loadDocs()]);
 
 function renderPost(){
   if(!CUR_POST) return;
@@ -1081,8 +1128,8 @@ function renderAdmin(){
   if(!SESSION){ tabs.innerHTML=''; who.textContent='Restricted area'; root.innerHTML=loginView(); return; }
   if(!CAN_ADMIN){ tabs.innerHTML=''; who.innerHTML=`Signed in as ${esc(SESSION.user.email)} · <button class="lnk" data-logout style="color:#fff">Sign out</button>`; root.innerHTML='<div class="gate panel"><h3>No admin access</h3><p style="color:var(--muted)">This account is not on the admin list.</p></div>'; return; }
   who.innerHTML = `Signed in as ${esc(SESSION.user.email)} · <button class="lnk" data-logout style="color:var(--cyan)">Sign out</button>`;
-  tabs.innerHTML=[['dashboard','Dashboard'],['leads','Leads'],['blog','Blog posts'],['testimonials','Testimonials']].map(t=>`<button class="${ATAB===t[0]?'on':''}" data-tab="${t[0]}">${t[1]}</button>`).join('');
-  root.innerHTML = ({dashboard:admDash,leads:admLeads,blog:admBlog,testimonials:admTesti})[ATAB]();
+  tabs.innerHTML=[['dashboard','Dashboard'],['leads','Leads'],['blog','Blog posts'],['testimonials','Testimonials'],['billing','Quotes & Invoices']].map(t=>`<button class="${ATAB===t[0]?'on':''}" data-tab="${t[0]}">${t[1]}</button>`).join('');
+  root.innerHTML = ({dashboard:admDash,leads:admLeads,blog:admBlog,testimonials:admTesti,billing:admBilling})[ATAB]();
 }
 document.addEventListener('click',async e=>{ if(e.target.closest('[data-logout]')){ await SB.auth.signOut(); } });
 document.addEventListener('submit',async e=>{
@@ -1113,7 +1160,8 @@ function admDash(){
    <div class="grid g2"><div class="panel"><h3>Most requested services</h3>${bars(by('service'))}</div>
    <div class="panel"><h3>Lead sources</h3>${bars(by('source').map(([k,v])=>[SRC[k]||k,v]))}</div></div>
    <div class="grid g2"><div class="panel"><h3>Blog <button class="btn btn-primary btn-sm" data-tab="blog">Manage</button></h3><p style="color:var(--muted)">${pubPosts().length} published · ${(STATE.posts||[]).filter(p=>p.status!=='Published').length} drafts</p></div>
-   <div class="panel"><h3>Testimonials <button class="btn btn-primary btn-sm" data-tab="testimonials">Manage</button></h3><p style="color:var(--muted)">${(STATE.testis||[]).filter(t=>t.published&&t.consent).length} published · ${(STATE.testis||[]).filter(t=>!(t.published&&t.consent)).length} hidden</p></div></div>`;
+   <div class="panel"><h3>Testimonials <button class="btn btn-primary btn-sm" data-tab="testimonials">Manage</button></h3><p style="color:var(--muted)">${(STATE.testis||[]).filter(t=>t.published&&t.consent).length} published · ${(STATE.testis||[]).filter(t=>!(t.published&&t.consent)).length} hidden</p></div></div>
+   ${STATE.docs?(()=>{const b=billStats();return `<div class="panel"><h3>Quotes &amp; invoices <button class="btn btn-primary btn-sm" data-tab="billing">Manage</button></h3><p style="color:var(--muted)">FY ${b.f}: ${b.q} quotations (${b.acc} accepted) · ${inr(b.inv)} invoiced · <b style="color:var(--navy)">${inr(b.due)} outstanding</b></p></div>`;})():''}`;
 }
 function admLeads(){
   if(STATE.leads===null) return '<div class="panel empty">Loading leads…</div>';
@@ -1125,7 +1173,7 @@ function admLeads(){
     <td><a href="tel:${esc(l.mobile)}" style="color:var(--blue)">${esc(l.mobile)}</a><div class="sub"><a href="https://wa.me/91${esc(String(l.mobile).replace(/\D/g,'').slice(-10))}" target="_blank" rel="noopener" style="color:#13804A">WhatsApp</a>${l.email?' · '+esc(l.email):''}</div></td>
     <td>${esc(l.service||'—')}<div class="sub">${esc(l.city||'')}</div></td>
     <td><select data-act="status" data-id="${esc(l.id)}">${STATUSES.map(s=>`<option ${s===l.status?'selected':''}>${s}</option>`).join('')}</select></td>
-    <td style="white-space:nowrap"><button class="lnk" data-act="openlead" data-id="${esc(l.id)}">${OPEN_LEAD===l.id?'Hide':'Details'}</button><button class="lnk danger" data-act="dellead" data-id="${esc(l.id)}">${ARMED==='l'+l.id?'Confirm delete':'Delete'}</button></td></tr>
+    <td style="white-space:nowrap"><button class="lnk" data-bact="quotelead" data-id="${esc(l.id)}">Quote</button><button class="lnk" data-act="openlead" data-id="${esc(l.id)}">${OPEN_LEAD===l.id?'Hide':'Details'}</button><button class="lnk danger" data-act="dellead" data-id="${esc(l.id)}">${ARMED==='l'+l.id?'Confirm delete':'Delete'}</button></td></tr>
     ${OPEN_LEAD===l.id?`<tr class="detail"><td colspan="6"><div class="kv"><div><small>Email</small>${esc(l.email||'—')}</div><div><small>Source</small>${esc(l.source||'—')} ${esc(l.page||'')}</div><div><small>Preferred time</small>${esc(l.time||'—')}</div></div><div style="margin-bottom:12px"><small style="color:var(--muted);font-size:12px">Message</small><div>${esc(l.message||'—')}</div></div><label>Internal notes</label><textarea rows="2" data-act="notes" data-id="${esc(l.id)}" placeholder="Call notes, follow-up date…">${esc(l.notes||'')}</textarea><div class="hint">Saved automatically when you click away.</div></td></tr>`:''}`).join('');
   return `<div class="panel"><h3>Leads (${L.length}) <span style="display:flex;gap:8px"><button class="btn btn-ghost btn-sm" data-act="refresh">Refresh</button><button class="btn btn-ghost btn-sm" data-act="csv">Copy as CSV</button><button class="btn btn-primary btn-sm" data-act="newlead">+ Add lead</button></span></h3>
    <div id="newlead"></div>
@@ -1246,6 +1294,268 @@ $('#admin-root').addEventListener('submit',async e=>{
   btn.disabled=false; renderAdmin();
 });
 
+/* ---------- QUOTES & INVOICES ---------- */
+const GST_STATES=[['01','Jammu & Kashmir'],['02','Himachal Pradesh'],['03','Punjab'],['04','Chandigarh'],['05','Uttarakhand'],['06','Haryana'],['07','Delhi'],['08','Rajasthan'],['09','Uttar Pradesh'],['10','Bihar'],['11','Sikkim'],['12','Arunachal Pradesh'],['13','Nagaland'],['14','Manipur'],['15','Mizoram'],['16','Tripura'],['17','Meghalaya'],['18','Assam'],['19','West Bengal'],['20','Jharkhand'],['21','Odisha'],['22','Chhattisgarh'],['23','Madhya Pradesh'],['24','Gujarat'],['26','Dadra & Nagar Haveli and Daman & Diu'],['27','Maharashtra'],['29','Karnataka'],['30','Goa'],['31','Lakshadweep'],['32','Kerala'],['33','Tamil Nadu'],['34','Puducherry'],['35','Andaman & Nicobar Islands'],['36','Telangana'],['37','Andhra Pradesh'],['38','Ladakh'],['97','Other Territory'],['96','Outside India (export)']];
+const BIZ_DEFAULT={name:'Acqube Accounting Services Pvt. Ltd.',address:'1002, 2nd Floor, AECS Layout A Block, Singasandra, 60 ft Road, Bangalore – 560068',state:'Karnataka',gstin:'',pan:'',cin:'',phone:'+91 99955 44890',email:'hello@acqube.com',
+  bank:'',branch:'',acname:'',acno:'',ifsc:'',upi:'',signatory:'',
+  qterms:'Prices are valid until the date shown.\nGovernment fees, stamp duty and other statutory charges are extra, unless stated.\nWork starts on acceptance of this quotation and receipt of the advance.',
+  terms:'Payment is due by the date shown. Please quote the invoice number when you pay.',notes:'Thank you for choosing Acqube.'};
+const GST_RATES=[0,5,18,40];
+let BIZ={...BIZ_DEFAULT}, BDOC=null, BF={kind:'',q:''}, BSHARE=null, BSET=false, VIEW=null;
+STATE.docs=null;
+const r2=n=>Math.round((+n||0)*100)/100;
+const inr=n=>'₹'+(+n||0).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2});
+const isoDay=(plus=0)=>{const t=new Date(Date.now()+plus*864e5+330*6e4);return t.toISOString().slice(0,10);};
+function fyOf(d){const t=new Date((d||isoDay())+'T00:00:00');const y=t.getMonth()>=3?t.getFullYear():t.getFullYear()-1;return String(y%100).padStart(2,'0')+'-'+String((y+1)%100).padStart(2,'0');}
+function nextNo(kind,date){const pre=(kind==='quote'?'QT':'INV')+'/'+fyOf(date)+'/';let max=0;(STATE.docs||[]).forEach(d=>{if((d.number||'').startsWith(pre)){const n=parseInt(d.number.slice(pre.length),10);if(n>max)max=n;}});return pre+String(max+1).padStart(3,'0');}
+function taxMode(doc,biz){ if(!biz.gstin) return 'none'; const cs=(doc.client||{}).state||biz.state; return cs===biz.state?'intra':'inter'; }
+function calc(doc,biz){ const mode=taxMode(doc,biz); let sub=0; const by={};
+  (doc.items||[]).forEach(it=>{const amt=r2((+it.qty||0)*(+it.rate||0)); sub+=amt; const g=mode==='none'?0:(+it.gst||0); if(g) by[g]=(by[g]||0)+amt*g/100;});
+  const taxes=Object.entries(by).map(([g,t])=>[+g,r2(t)]).sort((a,b)=>a[0]-b[0]); const tax=r2(taxes.reduce((s,x)=>s+x[1],0)); sub=r2(sub);
+  return {mode,sub,taxes,tax,total:r2(sub+tax)}; }
+function amountWords(n){
+  const a=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'],
+        b=['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'];
+  const two=x=>x<20?a[x]:b[Math.floor(x/10)]+(x%10?' '+a[x%10]:'');
+  const three=x=>x>=100?a[Math.floor(x/100)]+' Hundred'+(x%100?' '+two(x%100):''):two(x);
+  const w=x=>{ if(!x) return 'Zero'; const s=[]; const cr=Math.floor(x/1e7); x%=1e7; const l=Math.floor(x/1e5); x%=1e5; const th=Math.floor(x/1e3); x%=1e3;
+    if(cr) s.push(w(cr)+' Crore'); if(l) s.push(two(l)+' Lakh'); if(th) s.push(two(th)+' Thousand'); if(x) s.push(three(x)); return s.join(' '); };
+  const r=Math.floor(r2(n)), p=Math.round((r2(n)-r)*100); return 'Rupees '+w(r)+(p?' and '+two(p)+' Paise':'')+' Only'; }
+const stateLabel=s=>{const x=GST_STATES.find(z=>z[1]===s);return x?s+' ('+x[0]+')':(s||'');};
+const docLink=d=>location.origin+'/view/#t='+d.share_token;
+const docName=d=>d.kind==='quote'?'Quotation':'Invoice';
+
+function docHTML(d,biz){
+  const c=d.client||{}, t=calc(d,biz), isQ=d.kind==='quote';
+  const title=isQ?'Quotation':(t.mode==='none'?'Invoice':'Tax Invoice');
+  const logo=(document.querySelector('header .logo img, header img')||{}).src||'/favicon.png';
+  const taxRows=t.mode==='intra'?t.taxes.map(([g,v])=>{const h=r2(v/2);return `<tr><td>CGST @ ${g/2}%</td><td>${inr(h)}</td></tr><tr><td>SGST @ ${g/2}%</td><td>${inr(r2(v-h))}</td></tr>`;}).join('')
+                               :t.taxes.map(([g,v])=>`<tr><td>IGST @ ${g}%</td><td>${inr(v)}</td></tr>`).join('');
+  const paid=+d.amount_paid||0, showGst=t.mode!=='none';
+  const stamp=d.status==='Paid'?'PAID':(isQ&&d.status==='Accepted')?'ACCEPTED':d.status==='Cancelled'?'CANCELLED':'';
+  const lines=arr=>arr.filter(Boolean).map(esc).join('<br>');
+  return `<div class="doc">${stamp?`<div class="stamp s-${stamp}">${stamp}</div>`:''}
+  <div class="doc-top"><img src="${logo}" alt="Acqube" class="doc-logo"><div class="doc-ttl"><h1>${title}</h1><table class="doc-meta">
+    <tr><td>${isQ?'Quotation':'Invoice'} no.</td><td><b>${esc(d.number)}</b></td></tr><tr><td>Date</td><td>${esc(fmtDate(d.doc_date))}</td></tr>
+    ${d.due_date?`<tr><td>${isQ?'Valid until':'Due date'}</td><td>${esc(fmtDate(d.due_date))}</td></tr>`:''}</table></div></div>
+  <div class="doc-parties"><div><small>From</small><b>${esc(biz.name)}</b><p>${esc(biz.address)}</p><p>${lines([biz.gstin&&'GSTIN: '+biz.gstin,biz.pan&&'PAN: '+biz.pan,biz.cin&&'CIN: '+biz.cin])}</p><p>${esc([biz.phone,biz.email].filter(Boolean).join(' · '))}</p></div>
+    <div><small>${isQ?'Prepared for':'Bill to'}</small><b>${esc(c.company||c.name)}</b>${c.company&&c.name?`<p>Attn: ${esc(c.name)}</p>`:''}${c.address?`<p>${esc(c.address).replace(/\n/g,'<br>')}</p>`:''}
+    <p>${lines([c.gstin&&'GSTIN: '+c.gstin,(showGst||c.state)&&'Place of supply: '+stateLabel(c.state||biz.state)])}</p></div></div>
+  <div class="doc-scroll"><table class="doc-items"><thead><tr><th>#</th><th>Description</th><th>SAC</th><th class="n">Qty</th><th class="n">Rate</th>${showGst?'<th class="n">GST</th>':''}<th class="n">Amount</th></tr></thead><tbody>
+  ${(d.items||[]).map((it,i)=>`<tr><td>${i+1}</td><td>${esc(it.desc)}</td><td>${esc(it.sac||'')}</td><td class="n">${esc(it.qty)}</td><td class="n">${inr(it.rate)}</td>${showGst?`<td class="n">${+it.gst||0}%</td>`:''}<td class="n">${inr(r2((+it.qty||0)*(+it.rate||0)))}</td></tr>`).join('')}
+  </tbody></table></div>
+  <div class="doc-sum"><div class="doc-words"><small>Amount in words</small>${amountWords(t.total)}</div><table>
+    <tr><td>${showGst?'Taxable value':'Subtotal'}</td><td>${inr(t.sub)}</td></tr>${taxRows}<tr class="tot"><td>Total</td><td>${inr(t.total)}</td></tr>
+    ${!isQ&&paid?`<tr><td>Amount received</td><td>${inr(paid)}</td></tr><tr class="tot"><td>Balance due</td><td>${inr(Math.max(0,r2(t.total-paid)))}</td></tr>`:''}</table></div>
+  ${!isQ&&(biz.acno||biz.upi)?`<div class="doc-pay"><small>Payment details</small>${biz.acno?`<p>Account name: <b>${esc(biz.acname||biz.name)}</b><br>Account no: <b>${esc(biz.acno)}</b> · IFSC: <b>${esc(biz.ifsc)}</b>${biz.bank||biz.branch?'<br>'+esc([biz.bank,biz.branch].filter(Boolean).join(', ')):''}</p>`:''}${biz.upi?`<p>UPI: <b>${esc(biz.upi)}</b></p>`:''}</div>`:''}
+  ${d.notes?`<div class="doc-note"><small>Notes</small><p>${esc(d.notes).replace(/\n/g,'<br>')}</p></div>`:''}
+  ${d.terms?`<div class="doc-note"><small>Terms &amp; conditions</small><p>${esc(d.terms).replace(/\n/g,'<br>')}</p></div>`:''}
+  <div class="doc-sign"><div class="acc">${isQ&&d.accepted_at?`Accepted online${d.accepted_by?' by <b>'+esc(d.accepted_by)+'</b>':''} on ${esc(fmtDate(d.accepted_at))}`:''}</div>
+    <div>For <b>${esc(biz.name)}</b><div class="sig"></div>${esc(biz.signatory||'')}<small>Authorised signatory</small></div></div>
+  <div class="doc-foot">This is a computer-generated ${isQ?'quotation':'invoice'}. · ${esc(biz.phone)} · ${esc(biz.email)} · acqube.com</div></div>`;
+}
+
+/* client-facing page: /view/#t=<token> */
+async function renderView(){
+  const box=$('#view-root'), hp=new URLSearchParams(location.hash.slice(1)), tok=hp.get('t');
+  const msg=m=>box.innerHTML=`<div class="doc-msg"><img src="/favicon.png" alt="" width="48" height="48"><p>${m}</p><p><a class="btn btn-primary btn-sm" href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener">WhatsApp Acqube</a></p></div>`;
+  if(!tok) return msg('This link is incomplete. Please ask Acqube to send it again.');
+  if(!SB) return msg('This document cannot be loaded right now. Please try again shortly.');
+  box.innerHTML='<div class="doc-msg"><p>Loading your document…</p></div>';
+  const {data,error}=await SB.rpc('get_shared_doc',{p_token:tok});
+  if(error) return msg('This document cannot be loaded right now. Please try again shortly, or contact Acqube on +91 99955 44890.');
+  if(!data) return msg('This document could not be found. It may have been withdrawn – please contact Acqube on +91 99955 44890.');
+  const d=data.doc, biz={...BIZ_DEFAULT,...(data.business||{})}; VIEW={d,biz,tok};
+  const t=calc(d,biz), isQ=d.kind==='quote';
+  const expired=isQ&&d.due_date&&new Date(d.due_date+'T23:59:59+05:30')<new Date();
+  const canAccept=isQ&&['Draft','Sent'].includes(d.status)&&!expired;
+  const bal=Math.max(0,r2(t.total-(+d.amount_paid||0)));
+  const upi=!isQ&&biz.upi&&bal>0&&!['Paid','Cancelled'].includes(d.status)&&matchMedia('(pointer:coarse)').matches
+    ?`upi://pay?pa=${encodeURIComponent(biz.upi)}&pn=${encodeURIComponent(biz.name)}&am=${bal.toFixed(2)}&cu=INR&tn=${encodeURIComponent(d.number)}`:'';
+  document.title=docName(d)+' '+d.number+' | Acqube';
+  const ask=encodeURIComponent(`Hi Acqube, I have a question about ${docName(d).toLowerCase()} ${d.number}.`);
+  box.innerHTML=`<div class="doc-actions">
+    ${expired&&['Draft','Sent'].includes(d.status)?'<span class="doc-flag">This quotation has expired – contact us for an updated one.</span>':''}
+    ${d.status==='Cancelled'?'<span class="doc-flag">This document has been cancelled.</span>':''}
+    <a class="btn btn-ghost btn-sm" href="https://wa.me/${WHATSAPP_NUMBER}?text=${ask}" target="_blank" rel="noopener">Ask a question</a>
+    ${upi?`<a class="btn btn-cyan btn-sm" href="${upi}">Pay ${inr(bal)} by UPI</a>`:''}
+    ${canAccept?'<button class="btn btn-cyan btn-sm" data-vact="accept">Accept quotation</button>':''}
+    <button class="btn btn-primary btn-sm" data-vact="print">Download PDF</button></div>
+    <div id="accept-box"></div>${docHTML(d,biz)}`;
+  if(hp.get('print')) setTimeout(()=>print(),700);
+}
+document.addEventListener('click',async e=>{
+  const b=e.target.closest('[data-vact]'); if(!b||!VIEW) return; const a=b.dataset.vact;
+  if(a==='print') print();
+  if(a==='accept') $('#accept-box').innerHTML=`<form class="accept" id="acceptform"><b>Accept quotation ${esc(VIEW.d.number)} for ${inr(calc(VIEW.d,VIEW.biz).total)}</b>
+    <p>Type your name to confirm. Acqube will be notified and will get in touch to start the work.</p>
+    <div class="row"><input name="n" required maxlength="100" placeholder="Your full name" autocomplete="name"><button class="btn btn-primary btn-sm">Confirm acceptance</button><button type="button" class="btn btn-ghost btn-sm" data-vact="noaccept">Cancel</button></div></form>`;
+  if(a==='noaccept') $('#accept-box').innerHTML='';
+});
+document.addEventListener('submit',async e=>{
+  if(e.target.id!=='acceptform') return; e.preventDefault();
+  const btn=e.target.querySelector('button'); btn.disabled=true;
+  const {data,error}=await SB.rpc('accept_quote',{p_token:VIEW.tok,p_name:e.target.n.value});
+  if(error||!data){ toast('Could not accept this quotation. Please contact Acqube.'); btn.disabled=false; return; }
+  toast('Thank you! Your acceptance has been recorded.'); renderView();
+});
+
+/* admin */
+async function loadDocs(){ if(!SB||!CAN_ADMIN) return;
+  const {data,error}=await SB.from('billing_docs').select('*').order('created_at',{ascending:false}).limit(2000);
+  STATE.docs=error?false:data;
+  if(!error){ const r=await SB.from('billing_settings').select('profile').eq('id',1).maybeSingle(); if(r.data&&r.data.profile) BIZ={...BIZ_DEFAULT,...r.data.profile}; }
+  refreshAdmin(); }
+const BSTATUS={quote:['Draft','Sent','Accepted','Declined','Cancelled'],invoice:['Draft','Sent','Part paid','Paid','Cancelled']};
+function newDoc(kind,from={}){ const dt=isoDay();
+  return {kind,number:nextNo(kind,dt),doc_date:dt,due_date:isoDay(kind==='quote'?15:7),client:{state:BIZ.state,...(from.client||{})},
+    items:from.items?from.items.map(i=>({...i})):[{desc:'',sac:'9982',qty:1,rate:'',gst:18}],notes:BIZ.notes,terms:kind==='quote'?BIZ.qterms:BIZ.terms,
+    lead_id:from.lead_id||null,source_quote:from.source_quote||null}; }
+function billStats(){ const D=STATE.docs, f=fyOf(); const inFy=d=>fyOf(d.doc_date)===f;
+  const Q=D.filter(d=>d.kind==='quote'&&inFy(d)), I=D.filter(d=>d.kind==='invoice'&&inFy(d)&&d.status!=='Cancelled');
+  const due=D.filter(d=>d.kind==='invoice'&&['Sent','Part paid'].includes(d.status)).reduce((s,d)=>s+Math.max(0,(+d.total)-(+d.amount_paid||0)),0);
+  return {q:Q.length,acc:Q.filter(d=>d.status==='Accepted').length,inv:I.reduce((s,d)=>s+(+d.total),0),due,f}; }
+function admBilling(){
+  if(STATE.docs===null) return '<div class="panel empty">Loading quotes and invoices…</div>';
+  if(STATE.docs===false) return `<div class="panel"><h3>One-time setup needed</h3><p style="color:var(--muted)">Open <b>Supabase → SQL Editor</b>, paste the contents of <b>billing-setup.sql</b> (in your GitHub repository) and click Run. Then refresh this page.</p></div>`;
+  if(BSET) return bizForm();
+  if(BDOC) return billEditor();
+  const q=BF.q.toLowerCase();
+  const D=STATE.docs.filter(d=>(!BF.kind||d.kind===BF.kind)&&(!q||[d.number,(d.client||{}).name,(d.client||{}).company,(d.client||{}).mobile].join(' ').toLowerCase().includes(q)));
+  const s=billStats();
+  const rows=D.map(d=>{const c=d.client||{}, bal=r2((+d.total)-(+d.amount_paid||0));
+    return `<tr><td><b>${esc(d.number)}</b><div class="sub">${docName(d)}${d.viewed_at?' · seen '+esc(fmtDate(d.viewed_at)):''}</div></td>
+    <td><b>${esc(c.company||c.name||'—')}</b><div class="sub">${esc(c.company?c.name:(c.mobile||''))}</div></td>
+    <td>${esc(fmtDate(d.doc_date))}<div class="sub">${d.due_date?(d.kind==='quote'?'valid till ':'due ')+esc(fmtDate(d.due_date)):''}</div></td>
+    <td class="n"><b>${inr(d.total)}</b>${d.kind==='invoice'&&d.status==='Part paid'?`<div class="sub">balance ${inr(bal)}</div>`:''}</td>
+    <td><select data-bstatus="${esc(d.id)}">${BSTATUS[d.kind].map(x=>`<option ${x===d.status?'selected':''}>${x}</option>`).join('')}</select></td>
+    <td style="white-space:nowrap"><button class="lnk" data-bact="share" data-id="${esc(d.id)}">${BSHARE===d.id?'Hide':'Share'}</button><button class="lnk" data-bact="edit" data-id="${esc(d.id)}">Edit</button>${d.kind==='quote'?`<button class="lnk" data-bact="toinv" data-id="${esc(d.id)}">To invoice</button>`:''}<button class="lnk" data-bact="dup" data-id="${esc(d.id)}">Copy</button><button class="lnk danger" data-bact="del" data-id="${esc(d.id)}">${ARMED==='b'+d.id?'Confirm delete':'Delete'}</button></td></tr>
+    ${BSHARE===d.id?shareRow(d):''}`;}).join('');
+  return `<div class="stats"><div class="stat"><small>Quotations (FY ${s.f})</small><b>${s.q}</b></div><div class="stat"><small>Quotations accepted</small><b>${s.acc}</b></div>
+   <div class="stat"><small>Invoiced (FY ${s.f})</small><b style="font-size:22px">${inr(s.inv)}</b></div><div class="stat"><small>Outstanding</small><b style="font-size:22px">${inr(s.due)}</b></div></div>
+   ${!BIZ.gstin||!BIZ.acno?`<div class="note" style="margin-bottom:16px">${!BIZ.gstin?'GST is not being added because your GSTIN is not saved. ':''}${!BIZ.acno?'Bank details are not saved, so invoices show no payment details. ':''}<button class="lnk" data-bact="settings">Add business details</button></div>`:''}
+   <div class="panel"><h3>Quotes &amp; invoices (${D.length}) <span style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-ghost btn-sm" data-bact="settings">Business details</button><button class="btn btn-ghost btn-sm" data-bact="newq">+ Quotation</button><button class="btn btn-primary btn-sm" data-bact="newi">+ Invoice</button></span></h3>
+   <div class="toolbar"><input data-bfilter="q" placeholder="Search number, client, phone…" value="${esc(BF.q)}"><select data-bfilter="kind"><option value="">Quotes and invoices</option><option value="quote" ${BF.kind==='quote'?'selected':''}>Quotations</option><option value="invoice" ${BF.kind==='invoice'?'selected':''}>Invoices</option></select></div>
+   <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Number</th><th>Client</th><th>Date</th><th class="n">Amount</th><th>Status</th><th></th></tr></thead><tbody>
+   ${rows||'<tr><td colspan="6" class="empty">No quotations or invoices yet. Create one with the buttons above, or from a lead (Leads → Quote).</td></tr>'}</tbody></table></div></div>`;
+}
+function shareMsg(d){ const c=d.client||{}, isQ=d.kind==='quote';
+  return `Dear ${c.name||'Sir/Madam'},\n\nPlease find ${isQ?'our quotation':'invoice'} ${d.number} from Acqube Accounting Services for ${inr(d.total)}${d.due_date?(isQ?`, valid until ${fmtDate(d.due_date)}`:`, due by ${fmtDate(d.due_date)}`):''}.\n\nView and download it here:\n${docLink(d)}\n\n${isQ?'You can accept the quotation directly from the link.':'Payment details are given on the invoice.'}\n\nThank you,\nAcqube Accounting Services\n+91 99955 44890`; }
+function shareRow(d){ const c=d.client||{}, link=docLink(d), m=encodeURIComponent(shareMsg(d)), ph=String(c.mobile||'').replace(/\D/g,'').slice(-10);
+  const subj=encodeURIComponent(`${docName(d)} ${d.number} – Acqube Accounting Services`);
+  return `<tr class="detail"><td colspan="6"><div class="share"><input readonly value="${esc(link)}" aria-label="Share link">
+    <button class="btn btn-ghost btn-sm" data-bact="copy" data-id="${esc(d.id)}">Copy link</button>
+    <a class="btn btn-sm wa-btn" href="https://wa.me/${ph.length===10?'91'+ph:''}?text=${m}" target="_blank" rel="noopener" data-bact="sent" data-id="${esc(d.id)}">WhatsApp${ph.length===10?'':' (choose chat)'}</a>
+    <a class="btn btn-ghost btn-sm" href="mailto:${esc(c.email||'')}?subject=${subj}&body=${m}" data-bact="sent" data-id="${esc(d.id)}">Email</a>
+    <a class="btn btn-ghost btn-sm" href="/view/#print=1&t=${esc(d.share_token)}" target="_blank" rel="noopener">PDF / Print</a>
+    <a class="btn btn-ghost btn-sm" href="/view/#t=${esc(d.share_token)}" target="_blank" rel="noopener">Preview</a></div>
+    <div class="hint">Sending by WhatsApp or email marks a draft as Sent. ${d.kind==='quote'?'The client can view, download and accept the quotation from the link.':'The client can view and download the invoice from the link.'} Anyone with the link can open it, so share it only with the client.</div></td></tr>`; }
+function itemRow(it,i){ return `<tr><td><input data-i="${i}" data-k="desc" value="${esc(it.desc)}" placeholder="e.g. GST return filing – Oct 2026" ${i===0?'required':''}></td>
+  <td class="w-sac"><input data-i="${i}" data-k="sac" value="${esc(it.sac)}" inputmode="numeric"></td>
+  <td class="w-q"><input data-i="${i}" data-k="qty" type="number" min="0" step="any" value="${esc(it.qty)}"></td>
+  <td class="w-r"><input data-i="${i}" data-k="rate" type="number" min="0" step="0.01" value="${esc(it.rate)}"></td>
+  <td class="w-g"><select data-i="${i}" data-k="gst">${GST_RATES.map(g=>`<option value="${g}" ${+it.gst===g?'selected':''}>${g}%</option>`).join('')}</select></td>
+  <td class="n" id="amt-${i}">${inr(r2((+it.qty||0)*(+it.rate||0)))}</td>
+  <td><button type="button" class="lnk danger" data-bact="rmitem" data-i="${i}" aria-label="Remove line">✕</button></td></tr>`; }
+function totalsHTML(){ const t=calc(BDOC,BIZ);
+  const tx=t.mode==='intra'?t.taxes.map(([g,v])=>`<div><span>CGST ${g/2}% + SGST ${g/2}%</span><span>${inr(v)}</span></div>`).join(''):t.taxes.map(([g,v])=>`<div><span>IGST ${g}%</span><span>${inr(v)}</span></div>`).join('');
+  return `<div class="bill-tot"><div><span>Subtotal</span><span>${inr(t.sub)}</span></div>${tx}<div class="g"><span>Total</span><span>${inr(t.total)}</span></div>
+   <div class="hint">${t.mode==='none'?'No GST added – save your GSTIN in Business details to charge GST.':t.mode==='intra'?'Client in '+esc(BIZ.state)+': CGST + SGST.':'Client outside '+esc(BIZ.state)+': IGST.'}</div></div>`; }
+function billEditor(){ const d=BDOC, c=d.client, isQ=d.kind==='quote', L=STATE.leads||[];
+  const fld=(k,label,attrs='')=>`<div class="field"><label>${label}</label><input data-c="${k}" value="${esc(c[k])}" ${attrs}></div>`;
+  return `<div class="panel editor"><h3>${d.id?'Edit':'New'} ${isQ?'quotation':'invoice'} <button class="lnk" data-bact="back">← Back to list</button></h3>
+  <form data-bill="doc">
+  <div class="row3"><div class="field"><label>${isQ?'Quotation':'Invoice'} number <span class="req">*</span></label><input data-f="number" required maxlength="16" value="${esc(d.number)}"></div>
+   <div class="field"><label>Date</label><input type="date" data-f="doc_date" required value="${esc(d.doc_date)}"></div>
+   <div class="field"><label>${isQ?'Valid until':'Payment due by'}</label><input type="date" data-f="due_date" value="${esc(d.due_date||'')}"></div></div>
+  <h4>Client</h4>
+  ${!d.id&&L.length?`<div class="field"><label>Fill in from a lead</label><select data-bpick="lead"><option value="">Choose a lead (optional)…</option>${L.slice(0,400).map(l=>`<option value="${esc(l.id)}" ${d.lead_id===l.id?'selected':''}>${esc(l.name)}${l.company?' – '+esc(l.company):''} (${esc(l.mobile)})</option>`).join('')}</select></div>`:''}
+  <div class="row3">${fld('name','Contact name <span class="req">*</span>','required')}${fld('company','Business name')}${fld('gstin','Client GSTIN','maxlength="15" style="text-transform:uppercase"')}</div>
+  <div class="row3">${fld('mobile','Mobile (for WhatsApp)','inputmode="tel"')}${fld('email','Email','type="email"')}
+   <div class="field"><label>State (place of supply)</label><select data-c="state">${GST_STATES.map(s=>`<option ${s[1]===(c.state||BIZ.state)?'selected':''}>${s[1]}</option>`).join('')}</select></div></div>
+  <div class="field"><label>Address</label><textarea data-c="address" rows="2">${esc(c.address)}</textarea></div>
+  <h4>Services</h4>
+  <div class="tbl-wrap"><table class="tbl bill-items"><thead><tr><th>Description</th><th>SAC</th><th>Qty</th><th>Rate (₹)</th><th>GST</th><th class="n">Amount</th><th></th></tr></thead><tbody>${d.items.map(itemRow).join('')}</tbody></table></div>
+  <div class="bill-add"><button type="button" class="btn btn-ghost btn-sm" data-bact="additem">+ Add line</button>
+   <select data-bpick="svc"><option value="">+ Add from price list…</option>${PRICING.map((p,i)=>`<option value="${i}">${esc(p[0])} – ${esc(p[1]+p[2])}</option>`).join('')}</select></div>
+  <div id="bill-totals">${totalsHTML()}</div>
+  <div class="field"><label>Notes (shown on the ${isQ?'quotation':'invoice'})</label><textarea data-f="notes" rows="2">${esc(d.notes)}</textarea></div>
+  <div class="field"><label>Terms &amp; conditions</label><textarea data-f="terms" rows="3">${esc(d.terms)}</textarea></div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-primary" data-save="1">Save &amp; share</button><button class="btn btn-ghost" data-save="0">Save</button></div>
+  </form></div>`; }
+function bizForm(){ const b=BIZ, f=(k,l,a='')=>`<div class="field"><label>${l}</label><input data-z="${k}" value="${esc(b[k])}" ${a}></div>`, ta=(k,l)=>`<div class="field"><label>${l}</label><textarea data-z="${k}" rows="3">${esc(b[k])}</textarea></div>`;
+  return `<div class="panel editor"><h3>Business details <button class="lnk" data-bact="back">← Back to list</button></h3>
+  <p class="hint" style="margin:-6px 0 14px">Printed on every quotation and invoice. Only admins can see these settings; clients see them only on documents you share.</p>
+  <form data-bill="biz"><div class="row3">${f('name','Legal name','required')}${f('gstin','GSTIN','maxlength="15" style="text-transform:uppercase" placeholder="Leave blank if not GST registered"')}${f('pan','PAN','maxlength="10" style="text-transform:uppercase"')}</div>
+  <div class="row3">${f('cin','CIN')}${f('phone','Phone')}${f('email','Email','type="email"')}</div>
+  <div class="row3"><div class="field" style="grid-column:span 2"><label>Address</label><input data-z="address" value="${esc(b.address)}"></div>
+   <div class="field"><label>State</label><select data-z="state">${GST_STATES.map(s=>`<option ${s[1]===b.state?'selected':''}>${s[1]}</option>`).join('')}</select></div></div>
+  <h4>Payment details (shown on invoices)</h4>
+  <div class="row3">${f('acname','Account name')}${f('acno','Account number','inputmode="numeric"')}${f('ifsc','IFSC','maxlength="11" style="text-transform:uppercase"')}</div>
+  <div class="row3">${f('bank','Bank')}${f('branch','Branch')}${f('upi','UPI ID','placeholder="e.g. acqube@okaxis"')}</div>
+  <div class="row3">${f('signatory','Authorised signatory name')}<div></div><div></div></div>
+  ${ta('qterms','Default terms – quotations')}${ta('terms','Default terms – invoices')}${ta('notes','Default note')}
+  <button class="btn btn-primary">Save business details</button></form></div>`; }
+
+const admRoot=$('#admin-root');
+admRoot.addEventListener('click',async e=>{
+  const b=e.target.closest('[data-bact]'); if(!b||b.tagName==='SELECT') return;
+  const a=b.dataset.bact, id=b.dataset.id, d=(STATE.docs||[]).find(x=>x.id===id);
+  if(a==='newq'||a==='newi'){BDOC=newDoc(a==='newq'?'quote':'invoice');BSHARE=null;renderAdmin();scrollTo(0,0);}
+  if(a==='edit'&&d){BDOC=JSON.parse(JSON.stringify(d));renderAdmin();scrollTo(0,0);}
+  if(a==='dup'&&d){BDOC=newDoc(d.kind,{client:d.client,items:d.items});renderAdmin();scrollTo(0,0);}
+  if(a==='toinv'&&d){BDOC=newDoc('invoice',{client:d.client,items:d.items,lead_id:d.lead_id,source_quote:d.id});renderAdmin();scrollTo(0,0);toast('Invoice prepared from '+d.number+' – check and save');}
+  if(a==='quotelead'){const l=(STATE.leads||[]).find(x=>x.id===id); if(!l) return; ATAB='billing';
+    BDOC=newDoc('quote',{lead_id:l.id,client:{name:l.name,company:l.company||'',mobile:l.mobile||'',email:l.email||''}});
+    const p=PRICING.find(p=>p[0]===l.service||(SERVICES.find(s=>s.name===l.service)||{}).id===p[4]); if(p) BDOC.items=[{desc:p[0],sac:'9982',qty:1,rate:+String(p[1]).replace(/[^\d.]/g,''),gst:18}];
+    if(STATE.docs===null) loadDocs(); renderAdmin(); scrollTo(0,0);}
+  if(a==='back'){BDOC=null;BSET=false;renderAdmin();}
+  if(a==='settings'){BSET=true;renderAdmin();scrollTo(0,0);}
+  if(a==='share'){BSHARE=BSHARE===id?null:id;renderAdmin();}
+  if(a==='copy'&&d){ try{await navigator.clipboard.writeText(docLink(d));toast('Link copied');}catch(_){toast('Select the link and copy it');} }
+  if(a==='sent'&&d&&d.status==='Draft'){ d.status='Sent'; await run(SB.from('billing_docs').update({status:'Sent',updated_at:new Date().toISOString()}).eq('id',id),'Marked as sent'); renderAdmin(); }
+  if(a==='del'){ if(ARMED==='b'+id){ARMED=null; await run(SB.from('billing_docs').delete().eq('id',id),'Deleted',loadDocs);} else {ARMED='b'+id; renderAdmin();} }
+  if(a==='additem'){BDOC.items.push({desc:'',sac:'9982',qty:1,rate:'',gst:18});renderAdmin();}
+  if(a==='rmitem'){BDOC.items.splice(+b.dataset.i,1); if(!BDOC.items.length) BDOC.items.push({desc:'',sac:'9982',qty:1,rate:'',gst:18}); renderAdmin();}
+});
+function billInput(el){
+  if(!BDOC&&!BSET) return false;
+  if(el.dataset.f!==undefined){BDOC[el.dataset.f]=el.value; return true;}
+  if(el.dataset.c!==undefined){BDOC.client[el.dataset.c]=el.dataset.c==='gstin'?el.value.toUpperCase():el.value; if(el.dataset.c==='state') $('#bill-totals').innerHTML=totalsHTML(); return true;}
+  if(el.dataset.i!==undefined){const it=BDOC.items[+el.dataset.i]; it[el.dataset.k]=el.value; const c=$('#amt-'+el.dataset.i); if(c) c.textContent=inr(r2((+it.qty||0)*(+it.rate||0))); $('#bill-totals').innerHTML=totalsHTML(); return true;}
+  if(el.dataset.z!==undefined){(BSET_DRAFT||(BSET_DRAFT={...BIZ}))[el.dataset.z]=el.value; return true;}
+  return false; }
+let BSET_DRAFT=null;
+admRoot.addEventListener('input',e=>{ const el=e.target;
+  if(el.dataset.bfilter==='q'){ BF.q=el.value; clearTimeout(BF.t); BF.t=setTimeout(()=>{const pos=el.selectionStart;renderAdmin();const i=document.querySelector('[data-bfilter=q]');i.focus();i.setSelectionRange(pos,pos);},300); return; }
+  billInput(el); });
+admRoot.addEventListener('change',async e=>{ const el=e.target;
+  if(el.dataset.bfilter==='kind'){BF.kind=el.value;renderAdmin();return;}
+  if(el.dataset.bpick==='lead'){const l=(STATE.leads||[]).find(x=>x.id===el.value); if(l){BDOC.lead_id=l.id; Object.assign(BDOC.client,{name:l.name,company:l.company||'',mobile:l.mobile||'',email:l.email||''}); renderAdmin();} return;}
+  if(el.dataset.bpick==='svc'){const p=PRICING[+el.value]; if(p){const it={desc:p[0],sac:'9982',qty:1,rate:+String(p[1]).replace(/[^\d.]/g,''),gst:18}; const last=BDOC.items[BDOC.items.length-1]; if(last&&!last.desc&&!last.rate) BDOC.items[BDOC.items.length-1]=it; else BDOC.items.push(it); renderAdmin();} return;}
+  if(el.dataset.bstatus){ const d=STATE.docs.find(x=>x.id===el.dataset.bstatus); if(!d) return; const st=el.value, now=new Date().toISOString(), patch={status:st,updated_at:now};
+    if(st==='Paid'){patch.amount_paid=d.total; patch.paid_at=d.paid_at||now;}
+    if(st==='Part paid'){ const v=prompt(`Amount received so far for ${d.number} (total ${inr(d.total)}):`, d.amount_paid>0?d.amount_paid:''); const n=r2(String(v||'').replace(/[^\d.]/g,''));
+      if(!(n>0&&n<+d.total)){ toast('Enter an amount between 0 and the invoice total'); renderAdmin(); return; } patch.amount_paid=n; }
+    if(st==='Accepted'&&!d.accepted_at) patch.accepted_at=now;
+    Object.assign(d,patch); await run(SB.from('billing_docs').update(patch).eq('id',d.id),'Status updated'); renderAdmin(); return; }
+  billInput(el); });
+admRoot.addEventListener('submit',async e=>{ const f=e.target; if(!f.dataset.bill) return; e.preventDefault();
+  if(!f.checkValidity()){ f.reportValidity?.(); return; }
+  const btn=e.submitter||f.querySelector('button'); const share=btn&&btn.dataset.save==='1'; f.querySelectorAll('button').forEach(x=>x.disabled=true);
+  const now=new Date().toISOString();
+  if(f.dataset.bill==='biz'){ const p={...BIZ,...(BSET_DRAFT||{})}; ['gstin','pan','ifsc'].forEach(k=>p[k]=(p[k]||'').trim().toUpperCase());
+    if(await run(SB.from('billing_settings').upsert({id:1,profile:p,updated_at:now}),'Business details saved')){ BIZ={...BIZ_DEFAULT,...p}; BSET_DRAFT=null; BSET=false; }
+    renderAdmin(); return; }
+  const d=BDOC, items=d.items.filter(i=>String(i.desc||'').trim()).map(i=>({desc:String(i.desc).trim(),sac:String(i.sac||'').trim(),qty:+i.qty||0,rate:r2(i.rate),gst:+i.gst||0}));
+  if(!items.length){ toast('Add at least one service line'); f.querySelectorAll('button').forEach(x=>x.disabled=false); return; }
+  const t=calc({...d,items},BIZ);
+  const row={kind:d.kind,number:d.number.trim(),doc_date:d.doc_date,due_date:d.due_date||null,client:{...d.client,gstin:(d.client.gstin||'').trim().toUpperCase()},items,tax_mode:t.mode,
+    subtotal:t.sub,tax_total:t.tax,total:t.total,notes:(d.notes||'').trim()||null,terms:(d.terms||'').trim()||null,lead_id:d.lead_id||null,source_quote:d.source_quote||null,updated_at:now};
+  const {data,error}=await (d.id?SB.from('billing_docs').update(row).eq('id',d.id).select().single():SB.from('billing_docs').insert({...row,status:'Draft'}).select().single());
+  if(error){ toast('Could not save: '+(error.code==='23505'?'that number is already used':error.message)); f.querySelectorAll('button').forEach(x=>x.disabled=false); return; }
+  toast(docName(d)+' '+row.number+' saved'); BDOC=null; BSHARE=share?data.id:null; await loadDocs(); renderAdmin(); });
+
 /* connect */
 async function applySession(session){
   SESSION=session; AUTH_MSG='';
@@ -1334,11 +1644,13 @@ function route(){
   if(seg[0]==='services' && seg[1] && SERVICES.some(s=>s.id===seg[1])){ page='services'; svcId=seg[1]; path='/services/'+svcId+'/'; }
   else if(seg[0]==='blog' && seg[1]){ page='post'; CUR_POST=seg[1]; path='/blog/'+seg[1]+'/'; }
   else if(seg[0]==='admin'){ page='admin'; path='/admin/'; }
+  else if(seg[0]==='view'){ page='view'; path='/view/'; }
   else if(seg[0] && LEGAL[seg[0]]){ page='legal'; legalKey=seg[0]; path='/'+seg[0]+'/'; }
   else if(seg[0] && PAGES.includes(seg[0])){ page=seg[0]; path='/'+seg[0]+'/'; }
   if(page!=='post') CUR_POST=null;
   if(legalKey){ $('#legal-title').textContent=LEGAL[legalKey][0]; $('#legal-crumb').textContent=LEGAL[legalKey][0]; $('#legal-body').innerHTML=LEGAL[legalKey][1]; }
   document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id==='p-'+page));
+  document.body.classList.toggle('docview',page==='view'); if(page!=='view') VIEW=null;
   document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===(page==='post'?'blog':page)));
   document.querySelectorAll('[data-sid]').forEach(a=>a.classList.toggle('on',a.dataset.sid===svcId));
   document.querySelectorAll('.svc-block').forEach(b=>b.style.display=(!svcId||b.id==='b-'+svcId)?'':'none');
@@ -1366,6 +1678,7 @@ function route(){
     if(META[page]) setMeta({title:META[page][0],desc:META[page][1],path});
     else if(page==='legal') setMeta({title:LEGAL[legalKey][0]+' | Acqube Accounting',desc:LEGAL[legalKey][0]+' of Acqube Accounting Services Pvt Ltd.',path});
     else if(page==='admin') setMeta({title:'Admin – Acqube',desc:'Acqube admin console',path,noindex:true});
+    else if(page==='view'){ setMeta({title:'Quotation / Invoice | Acqube',desc:'A quotation or invoice from Acqube Accounting Services.',path,noindex:true}); renderView(); }
     else if(page==='post'){ setMeta({title:'Knowledge Centre | Acqube',desc:META.blog[1],path}); renderPost(); }
   }
   $('#menu').classList.remove('open');

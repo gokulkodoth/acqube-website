@@ -1651,6 +1651,7 @@ function go(path){ if(path!==location.pathname){ history.pushState(null,'',path)
 function route(){
   const legacy=hashToPath(location.hash.slice(1));
   if(legacy && (location.pathname==='/'||location.pathname==='/index.html')){ history.replaceState(null,'',legacy); }
+  else if(/\/index\.html$/.test(location.pathname)){ history.replaceState(null,'',location.pathname.replace(/index\.html$/,'')+location.search+location.hash); }
   const seg=location.pathname.split('/').filter(Boolean).filter(x=>x!=='index.html');
   let page='home', svcId=null, legalKey=null, path='/';
   if(seg.length===1 && LEGACY[seg[0]]){ history.replaceState(null,'',LEGACY[seg[0]]); return route(); }
